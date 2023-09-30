@@ -2,46 +2,90 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Results summary component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+  <title>Document</title>
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    :root {
+      --light-red: hsl(0, 100%, 67%);
+      --orangey-yellow: hsl(39, 100%, 56%);
+      --green-teal: hsl(166, 100%, 37%);
+      --cobalt-blue: hsl(234, 85%, 45%);
+      
+      --white: hsl(0, 0%, 100%);
+      --pale-blue: hsl(221, 100%, 96%);
+      --light-lavender: hsl(241, 100%, 89%);
+      --dark-gray-blue: hsl(224, 30%, 27%);
+    }
+    
+    @font-face {
+      font-family: 'Hanken Grotesk';
+      src: url('assets/fonts/HankenGrotesk-VariableFont_wght.ttf') format('truetype');
+    }
+    
+    body {
+      margin: 0;
+      font-family: 'Hanken Grotesk' , sans-serif;
+    }
+    
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100vh;
+      background-color: var(--white);
+    }
+    
+    .summary {
+      display: flex;
+      width: 600px;
+      background-color: var(--dark-gray-blue);
+      border-radius: 1rem;
+    }
+    
+
+    
   </style>
 </head>
 <body>
-
-  Your Result
-  76
-  of 100
-
-  Great
-  You scored higher than 65% of the people who have taken these tests.
-  
-  Summary
-
-  Reaction
-  80 / 100
-
-  Memory
-  92 / 100
-
-  Verbal
-  61 / 100
-
-  Visual
-  72 / 100
-
-  Continue
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <div class="container">
+    <section class="summary">
+      <div class="summary-display">
+        <h2 class="summary-title gray">Your Result</h2>
+        <div class="summary-score">
+          <p class="score-title">76</p>
+          <p class="score-subtitle">of 100</p>
+        </div>
+        <h3 class="summary-subtitle white">Great</h3>
+        <p class="summary-text">You scored higher than 65% of the people who have taken these tests.</p>
+      </div>
+      <div class="card-score">
+        <h2 class="summary-title dark">Summary</h2>
+        <ul class="summary-items">
+          <li class="summary-item style-red">
+            <p class="item-name">Reaction</p>
+            <p class="item-score">80 / 100</p>
+          </li>
+          <li class="summary-item style-yellow">
+            <p class="item-name">Memory</p>
+            <p class="item-score">92 / 100</p>
+          </li>
+          <li class="summary-item style-green">
+            <p class="item-name">Verbal</p>
+            <p class="item-score">61 / 100</p>
+          </li>
+          <li class="summary-item style-blue">
+            <p class="item-name">Visual</p>
+            <p class="item-score">72 / 100</p>
+          </li>
+        </ul>
+        <button class="summary-button button">Continue</button>
+      </div>
+    </section>
   </div>
 </body>
 </html>
